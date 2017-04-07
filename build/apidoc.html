@@ -1,0 +1,4096 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/maxogden/mississippi#readme"
+
+    >mississippi (v1.3.0)</a>
+</h1>
+<h4>a collection of useful streams</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi">module mississippi</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat">
+            function <span class="apidocSignatureSpan">mississippi.</span>concat
+            <span class="apidocSignatureSpan">(opts, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_">
+            function <span class="apidocSignatureSpan">mississippi.</span>concat.super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex">
+            function <span class="apidocSignatureSpan">mississippi.</span>duplex
+            <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_">
+            function <span class="apidocSignatureSpan">mississippi.</span>duplex.super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.each">
+            function <span class="apidocSignatureSpan">mississippi.</span>each
+            <span class="apidocSignatureSpan">(stream, fn, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.finished">
+            function <span class="apidocSignatureSpan">mississippi.</span>finished
+            <span class="apidocSignatureSpan">(stream, opts, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.from">
+            function <span class="apidocSignatureSpan">mississippi.</span>from
+            <span class="apidocSignatureSpan">(opts, read)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipe">
+            function <span class="apidocSignatureSpan">mississippi.</span>pipe
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline">
+            function <span class="apidocSignatureSpan">mississippi.</span>pipeline
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline.obj">
+            function <span class="apidocSignatureSpan">mississippi.</span>pipeline.obj
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.through">
+            function <span class="apidocSignatureSpan">mississippi.</span>through
+            <span class="apidocSignatureSpan">(options, transform, flush)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.to">
+            function <span class="apidocSignatureSpan">mississippi.</span>to
+            <span class="apidocSignatureSpan">(opts, write, flush)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>concat.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>concat.super_.WritableState.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>concat.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>duplex.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>duplex.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>duplex.super_.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>pipeline.obj.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>pipeline.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.</span>to.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.concat">module mississippi.concat</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.concat">
+            function <span class="apidocSignatureSpan">mississippi.</span>concat
+            <span class="apidocSignatureSpan">(opts, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_">
+            function <span class="apidocSignatureSpan">mississippi.concat.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.concat.prototype">module mississippi.concat.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.prototype._write">
+            function <span class="apidocSignatureSpan">mississippi.concat.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, enc, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.prototype.getBody">
+            function <span class="apidocSignatureSpan">mississippi.concat.prototype.</span>getBody
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.prototype.inferEncoding">
+            function <span class="apidocSignatureSpan">mississippi.concat.prototype.</span>inferEncoding
+            <span class="apidocSignatureSpan">(buff)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.concat.super_">module mississippi.concat.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.super_">
+            function <span class="apidocSignatureSpan">mississippi.concat.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.WritableState">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.</span>WritableState
+            <span class="apidocSignatureSpan">(options, stream)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.concat.super_.WritableState.prototype">module mississippi.concat.super_.WritableState.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.WritableState.prototype.getBuffer">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.WritableState.prototype.</span>getBuffer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.concat.super_.prototype">module mississippi.concat.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.prototype._write">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.prototype.cork">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>cork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.prototype.end">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>end
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.prototype.pipe">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>pipe
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.prototype.setDefaultEncoding">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>setDefaultEncoding
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.prototype.uncork">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>uncork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.concat.super_.prototype.write">
+            function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>write
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>_writev</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.duplex">module mississippi.duplex</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.duplex">
+            function <span class="apidocSignatureSpan">mississippi.</span>duplex
+            <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.obj">
+            function <span class="apidocSignatureSpan">mississippi.duplex.</span>obj
+            <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_">
+            function <span class="apidocSignatureSpan">mississippi.duplex.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.duplex.prototype">module mississippi.duplex.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype._destroy">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_destroy
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype._finish">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_finish
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype._forward">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_forward
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype._read">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype._write">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_write
+            <span class="apidocSignatureSpan">(data, enc, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype.cork">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>cork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype.destroy">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype.end">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>end
+            <span class="apidocSignatureSpan">(data, enc, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype.setReadable">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>setReadable
+            <span class="apidocSignatureSpan">(readable)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype.setWritable">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>setWritable
+            <span class="apidocSignatureSpan">(writable)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.prototype.uncork">
+            function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>uncork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.duplex.super_">module mississippi.duplex.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_">
+            function <span class="apidocSignatureSpan">mississippi.duplex.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.duplex.super_.prototype">module mississippi.duplex.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.prototype._write">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.prototype.cork">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>cork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.prototype.end">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>end
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.prototype.setDefaultEncoding">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>setDefaultEncoding
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.prototype.uncork">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>uncork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.prototype.write">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>write
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>_writev</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.duplex.super_.super_.prototype">module mississippi.duplex.super_.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype._read">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>_read
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.addListener">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>addListener
+            <span class="apidocSignatureSpan">(ev, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.isPaused">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>isPaused
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.on">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>on
+            <span class="apidocSignatureSpan">(ev, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.pause">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.pipe">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>pipe
+            <span class="apidocSignatureSpan">(dest, pipeOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.push">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>push
+            <span class="apidocSignatureSpan">(chunk, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.read">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>read
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.resume">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>resume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.setEncoding">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>setEncoding
+            <span class="apidocSignatureSpan">(enc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.unpipe">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>unpipe
+            <span class="apidocSignatureSpan">(dest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.unshift">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>unshift
+            <span class="apidocSignatureSpan">(chunk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.duplex.super_.super_.prototype.wrap">
+            function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>wrap
+            <span class="apidocSignatureSpan">(stream)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.from">module mississippi.from</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.from.from">
+            function <span class="apidocSignatureSpan">mississippi.</span>from
+            <span class="apidocSignatureSpan">(opts, read)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.from.ctor">
+            function <span class="apidocSignatureSpan">mississippi.from.</span>ctor
+            <span class="apidocSignatureSpan">(opts, read)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.from.obj">
+            function <span class="apidocSignatureSpan">mississippi.from.</span>obj
+            <span class="apidocSignatureSpan">(opts, read)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.pipeline">module mississippi.pipeline</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline.pipeline">
+            function <span class="apidocSignatureSpan">mississippi.</span>pipeline
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline.obj">
+            function <span class="apidocSignatureSpan">mississippi.pipeline.</span>obj
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline.super_">
+            function <span class="apidocSignatureSpan">mississippi.pipeline.</span>super_
+            <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.pipeline.obj">module mississippi.pipeline.obj</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline.obj.obj">
+            function <span class="apidocSignatureSpan">mississippi.pipeline.</span>obj
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline.obj.super_">
+            function <span class="apidocSignatureSpan">mississippi.pipeline.obj.</span>super_
+            <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.pipeline.obj.prototype">module mississippi.pipeline.obj.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline.obj.prototype.setPipeline">
+            function <span class="apidocSignatureSpan">mississippi.pipeline.obj.prototype.</span>setPipeline
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.pipeline.prototype">module mississippi.pipeline.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.pipeline.prototype.setPipeline">
+            function <span class="apidocSignatureSpan">mississippi.pipeline.prototype.</span>setPipeline
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.through">module mississippi.through</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.through.through">
+            function <span class="apidocSignatureSpan">mississippi.</span>through
+            <span class="apidocSignatureSpan">(options, transform, flush)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.through.ctor">
+            function <span class="apidocSignatureSpan">mississippi.through.</span>ctor
+            <span class="apidocSignatureSpan">(options, transform, flush)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.through.obj">
+            function <span class="apidocSignatureSpan">mississippi.through.</span>obj
+            <span class="apidocSignatureSpan">(options, transform, flush)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.to">module mississippi.to</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.to.to">
+            function <span class="apidocSignatureSpan">mississippi.</span>to
+            <span class="apidocSignatureSpan">(opts, write, flush)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.to.obj">
+            function <span class="apidocSignatureSpan">mississippi.to.</span>obj
+            <span class="apidocSignatureSpan">(opts, worker, flush)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.to.super_">
+            function <span class="apidocSignatureSpan">mississippi.to.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mississippi.to.prototype">module mississippi.to.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.to.prototype._write">
+            function <span class="apidocSignatureSpan">mississippi.to.prototype.</span>_write
+            <span class="apidocSignatureSpan">(data, enc, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.to.prototype.destroy">
+            function <span class="apidocSignatureSpan">mississippi.to.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mississippi.to.prototype.end">
+            function <span class="apidocSignatureSpan">mississippi.to.prototype.</span>end
+            <span class="apidocSignatureSpan">(data, enc, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi" id="apidoc.module.mississippi">module mississippi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat" id="apidoc.element.mississippi.concat">
+        function <span class="apidocSignatureSpan">mississippi.</span>concat
+        <span class="apidocSignatureSpan">(opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ConcatStream(opts, cb) {
+  if (!(this instanceof ConcatStream)) return new ConcatStream(opts, cb)
+
+  if (typeof opts === &#x27;function&#x27;) {
+    cb = opts
+    opts = {}
+  }
+  if (!opts) opts = {}
+
+  var encoding = opts.encoding
+  var shouldInferEncoding = false
+
+  if (!encoding) {
+    shouldInferEncoding = true
+  } else {
+    encoding =  String(encoding).toLowerCase()
+    if (encoding === &#x27;u8&#x27; || encoding === &#x27;uint8&#x27;) {
+      encoding = &#x27;uint8array&#x27;
+    }
+  }
+
+  Writable.call(this, { objectMode: true })
+
+  this.encoding = encoding
+  this.shouldInferEncoding = shouldInferEncoding
+
+  if (cb) this.on(&#x27;finish&#x27;, function () { cb(this.getBody()) })
+  this.body = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+writing world
+(nothing happens for 1 sec)
+finished
+```
+
+### concat
+
+#####`var concat = miss.<span class="apidocCodeKeywordSpan">concat</span>(cb)`
+
+Returns a writable stream that concatenates all data written to the stream and calls a callback with the single result.
+
+Calling `miss.concat(cb)` returns a writable stream. `cb` is called when the writable stream is finished, e.g. when all data is
+done being written to it. `cb` is called with a single argument, `(data)`, which will contain the result of concatenating all the
+ data written to the stream.
+
+Note that `miss.concat` will not handle stream errors for you. To handle errors, use `miss.pipe` or handle the `error` event manually
+.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_" id="apidoc.element.mississippi.concat.super_">
+        function <span class="apidocSignatureSpan">mississippi.</span>concat.super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Writable(options) {
+  Duplex = Duplex || require(&#x27;./_stream_duplex&#x27;);
+
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!realHasInstance.call(Writable, this) &#x26;&#x26; !(this instanceof Duplex)) {
+    return new Writable(options);
+  }
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === &#x27;function&#x27;) this._write = options.write;
+
+    if (typeof options.writev === &#x27;function&#x27;) this._writev = options.writev;
+  }
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex" id="apidoc.element.mississippi.duplex">
+        function <span class="apidocSignatureSpan">mississippi.</span>duplex
+        <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">duplex = function (writable, readable, opts) {
+  if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
+  stream.Duplex.call(this, opts)
+
+  this._writable = null
+  this._readable = null
+  this._readable2 = null
+
+  this._forwardDestroy = !opts || opts.destroy !== false
+  this._forwardEnd = !opts || opts.end !== false
+  this._corked = 1 // start corked
+  this._ondrain = null
+  this._drained = false
+  this._forwarding = false
+  this._unwrite = null
+  this._unread = null
+  this._ended = false
+
+  this.destroyed = false
+
+  if (writable) this.setWritable(writable)
+  if (readable) this.setReadable(readable)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (err) return console.error(&#x27;Image processing error!&#x27;, err)
+  console.log(&#x27;Image processed successfully&#x27;)
+})
+```
+
+### duplex
+
+##### `var duplex = miss.<span class="apidocCodeKeywordSpan">duplex</span>([writable, readable, opts])`
+
+Take two separate streams, a writable and a readable, and turn them into a single [duplex (readable and writable) stream](https://
+nodejs.org/api/stream.html#stream_class_stream_duplex).
+
+The returned stream will emit data from the readable. When you write to it it writes to the writable.
+
+You can either choose to supply the writable and the readable at the time you create the stream, or you can do it later using the
+ `.setWritable` and `.setReadable` methods and data written to the stream in the meantime will be buffered for you.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_" id="apidoc.element.mississippi.duplex.super_">
+        function <span class="apidocSignatureSpan">mississippi.</span>duplex.super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Duplex(options) {
+  if (!(this instanceof Duplex)) return new Duplex(options);
+
+  Readable.call(this, options);
+  Writable.call(this, options);
+
+  if (options &#x26;&#x26; options.readable === false) this.readable = false;
+
+  if (options &#x26;&#x26; options.writable === false) this.writable = false;
+
+  this.allowHalfOpen = true;
+  if (options &#x26;&#x26; options.allowHalfOpen === false) this.allowHalfOpen = false;
+
+  this.once(&#x27;end&#x27;, onend);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.each" id="apidoc.element.mississippi.each">
+        function <span class="apidocSignatureSpan">mississippi.</span>each
+        <span class="apidocSignatureSpan">(stream, fn, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(stream, fn, cb) {
+  var want = true
+  var error = null
+  var ended = false
+  var running = false
+
+  stream.on(&#x27;readable&#x27;, onreadable)
+  onreadable()
+
+  if (cb) eos(stream, {readable: true, writable: false}, done)
+  return stream
+
+  function done (err) {
+    if (!error) error = err
+    ended = true
+    if (!running) cb(error)
+  }
+
+  function onreadable () {
+    if (want) read()
+  }
+
+  function afterRead (err) {
+    running = false
+
+    if (err) {
+      error = err
+      if (ended) return cb(error)
+      stream.destroy(err)
+      return
+    }
+    if (ended) return cb(error)
+    read()
+  }
+
+  function read () {
+    if (ended || running) return
+    want = false
+
+    var data = shift(stream)
+    if (!data) {
+      want = true
+      return
+    }
+
+    running = true
+    fn(data, afterRead)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (err) return console.error(&#x27;Copy error!&#x27;, err)
+  console.log(&#x27;Copied successfully&#x27;)
+})
+```
+
+### each
+
+##### `miss.<span class="apidocCodeKeywordSpan">each</span>(stream, each, [done])`
+
+Iterate the data in `stream` one chunk at a time. Your `each` function will be called with `(data, next)` where data is a data chunk
+ and next is a callback. Call `next` when you are ready to consume the next chunk.
+
+Optionally you can call `next` with an error to destroy the stream. You can also pass the optional third argument, `done`, which
+ is a function that will be called with `(err)` when the stream ends. The `err` argument will be populated with an error if the
+stream emitted an error.
+
+#### original module
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.finished" id="apidoc.element.mississippi.finished">
+        function <span class="apidocSignatureSpan">mississippi.</span>finished
+        <span class="apidocSignatureSpan">(stream, opts, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finished = function (stream, opts, callback) {
+	if (typeof opts === &#x27;function&#x27;) return eos(stream, null, opts);
+	if (!opts) opts = {};
+
+	callback = once(callback || noop);
+
+	var ws = stream._writableState;
+	var rs = stream._readableState;
+	var readable = opts.readable || (opts.readable !== false &#x26;&#x26; stream.readable);
+	var writable = opts.writable || (opts.writable !== false &#x26;&#x26; stream.writable);
+
+	var onlegacyfinish = function() {
+		if (!stream.writable) onfinish();
+	};
+
+	var onfinish = function() {
+		writable = false;
+		if (!readable) callback.call(stream);
+	};
+
+	var onend = function() {
+		readable = false;
+		if (!writable) callback.call(stream);
+	};
+
+	var onexit = function(exitCode) {
+		callback.call(stream, exitCode ? new Error(&#x27;exited with error code: &#x27; + exitCode) : null);
+	};
+
+	var onclose = function() {
+		if (readable &#x26;&#x26; !(rs &#x26;&#x26; rs.ended)) return callback.call(stream, new Error(&#x27;premature close&#x27;));
+		if (writable &#x26;&#x26; !(ws &#x26;&#x26; ws.ended)) return callback.call(stream, new Error(&#x27;premature close&#x27;));
+	};
+
+	var onrequest = function() {
+		stream.req.on(&#x27;finish&#x27;, onfinish);
+	};
+
+	if (isRequest(stream)) {
+		stream.on(&#x27;complete&#x27;, onfinish);
+		stream.on(&#x27;abort&#x27;, onclose);
+		if (stream.req) onrequest();
+		else stream.on(&#x27;request&#x27;, onrequest);
+	} else if (writable &#x26;&#x26; !ws) { // legacy streams
+		stream.on(&#x27;end&#x27;, onlegacyfinish);
+		stream.on(&#x27;close&#x27;, onlegacyfinish);
+	}
+
+	if (isChildProcess(stream)) stream.on(&#x27;exit&#x27;, onexit);
+
+	stream.on(&#x27;end&#x27;, onend);
+	stream.on(&#x27;finish&#x27;, onfinish);
+	if (opts.error !== false) stream.on(&#x27;error&#x27;, callback);
+	stream.on(&#x27;close&#x27;, onclose);
+
+	return function() {
+		stream.removeListener(&#x27;complete&#x27;, onfinish);
+		stream.removeListener(&#x27;abort&#x27;, onclose);
+		stream.removeListener(&#x27;request&#x27;, onrequest);
+		if (stream.req) stream.req.removeListener(&#x27;finish&#x27;, onfinish);
+		stream.removeListener(&#x27;end&#x27;, onlegacyfinish);
+		stream.removeListener(&#x27;close&#x27;, onlegacyfinish);
+		stream.removeListener(&#x27;finish&#x27;, onfinish);
+		stream.removeListener(&#x27;exit&#x27;, onexit);
+		stream.removeListener(&#x27;end&#x27;, onend);
+		stream.removeListener(&#x27;error&#x27;, callback);
+		stream.removeListener(&#x27;close&#x27;, onclose);
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  console.error(err) // print the error to STDERR
+  process.exit(1) // exit program with non-zero exit code
+}
+```
+
+### finished
+
+#####`miss.<span class="apidocCodeKeywordSpan">finished</span>(stream, cb)`
+
+Waits for `stream` to finish or error and then calls `cb` with `(err)`. `cb` will only be called once. `err` will be null if the
+ stream finished without error, or else it will be populated with the error from the streams `error` event.
+
+This function is useful for simplifying stream handling code as it lets you handle success or error conditions in a single code
+path. It&#x27;s used internally `miss.pipe`.
+
+#### original module
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.from" id="apidoc.element.mississippi.from">
+        function <span class="apidocSignatureSpan">mississippi.</span>from
+        <span class="apidocSignatureSpan">(opts, read)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function from2(opts, read) {
+  if (typeof opts !== &#x27;object&#x27; || Array.isArray(opts)) {
+    read = opts
+    opts = {}
+  }
+
+  var rs = new Proto(opts)
+  rs._from = Array.isArray(read) ? toFunction(read) : (read || noop)
+  return rs
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (err) return console.error(&#x27;Trouble uppercasing!&#x27;)
+  console.log(&#x27;Splendid uppercasing!&#x27;)
+})
+```
+
+### from
+
+#####`miss.<span class="apidocCodeKeywordSpan">from</span>([opts], read)`
+
+Make a custom [readable stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_readable).
+
+`opts` contains the options to pass on to the ReadableStream constructor e.g. for creating a readable object stream (or use the
+shortcut `miss.from.obj([...])`).
+
+Returns a readable stream that calls `read(size, next)` when data is requested from the stream.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipe" id="apidoc.element.mississippi.pipe">
+        function <span class="apidocSignatureSpan">mississippi.</span>pipe
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipe = function () {
+  var streams = Array.prototype.slice.call(arguments)
+  var callback = isFn(streams[streams.length - 1] || noop) &#x26;&#x26; streams.pop() || noop
+
+  if (Array.isArray(streams[0])) streams = streams[0]
+  if (streams.length &#x3c; 2) throw new Error(&#x27;pump requires two streams per minimum&#x27;)
+
+  var error
+  var destroys = streams.map(function (stream, i) {
+    var reading = i &#x3c; streams.length - 1
+    var writing = i &#x3e; 0
+    return destroyer(stream, reading, writing, function (err) {
+      if (!error) error = err
+      if (err) destroys.forEach(call)
+      if (reading) return
+      destroys.forEach(call)
+      callback(error)
+    })
+  })
+
+  return streams.reduce(pipe)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [to](#to)
+- [concat](#concat)
+- [finished](#finished)
+- [parallel](#parallel)
+
+### pipe
+
+##### `miss.<span class="apidocCodeKeywordSpan">pipe</span>(stream1, stream2, stream3, ..., cb)`
+
+Pipes streams together and destroys all of them if one of them closes. Calls `cb` with `(error)` if there was an error in any of
+ the streams.
+
+When using standard `source.pipe(destination)` the source will _not_ be destroyed if the destination emits close or error. You are
+ also not able to provide a callback to tell when the pipe has finished.
+
+`miss.pipe` does these two things for you, ensuring you handle stream errors 100% of the time (unhandled errors are probably the
+ most common bug in most node streams code)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline" id="apidoc.element.mississippi.pipeline">
+        function <span class="apidocSignatureSpan">mississippi.</span>pipeline
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipeline = function () {
+  var streams = toArray(arguments)
+  if (!(this instanceof Pumpify)) return new Pumpify(streams)
+  Duplexify.call(this, null, null, opts)
+  if (streams.length) this.setPipeline(streams)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var fs = require(&#x27;fs&#x27;)
+var split = require(&#x27;split2&#x27;)
+
+var newLineSeparatedNumbers = fs.createReadStream(&#x27;numbers.txt&#x27;)
+
+var pipeline = miss.<span class="apidocCodeKeywordSpan">pipeline</span>(newLineSeparatedNumbers, split())
+var each = miss.each(pipeline, eachLine, done)
+var sum = 0
+
+function eachLine (line, next) {
+  sum += parseInt(line.toString())
+  next()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline.obj" id="apidoc.element.mississippi.pipeline.obj">
+        function <span class="apidocSignatureSpan">mississippi.</span>pipeline.obj
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipeline.obj = function () {
+  var streams = toArray(arguments)
+  if (!(this instanceof Pumpify)) return new Pumpify(streams)
+  Duplexify.call(this, null, null, opts)
+  if (streams.length) this.setPipeline(streams)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.through" id="apidoc.element.mississippi.through">
+        function <span class="apidocSignatureSpan">mississippi.</span>through
+        <span class="apidocSignatureSpan">(options, transform, flush)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">through = function (options, transform, flush) {
+  if (typeof options == &#x27;function&#x27;) {
+    flush     = transform
+    transform = options
+    options   = {}
+  }
+
+  if (typeof transform != &#x27;function&#x27;)
+    transform = noop
+
+  if (typeof flush != &#x27;function&#x27;)
+    flush = null
+
+  return construct(options, transform, flush)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// duplexCurl will write to stdin and read from stdout
+var duplexCurl = miss.duplex(curl.stdin, curl.stdout)
+```
+
+### through
+
+#####`var transformer = miss.<span class="apidocCodeKeywordSpan">through</span>([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.obj([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.push(data)`. Call `cb()` to indicate processing of the
+ `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.to" id="apidoc.element.mississippi.to">
+        function <span class="apidocSignatureSpan">mississippi.</span>to
+        <span class="apidocSignatureSpan">(opts, write, flush)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WriteStream(opts, write, flush) {
+  if (!(this instanceof WriteStream)) return new WriteStream(opts, write, flush)
+
+  if (typeof opts === &#x27;function&#x27;) {
+    flush = write
+    write = opts
+    opts = {}
+  }
+
+  stream.Writable.call(this, opts)
+
+  this.destroyed = false
+  this._worker = write || null
+  this._flush = flush || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// pipe &#x22;hello world&#x22; out
+// to stdout.
+fromString(&#x27;hello world&#x27;).pipe(process.stdout)
+```
+
+### to
+
+#####`miss.<span class="apidocCodeKeywordSpan">to</span>([options], write, [flush])`
+
+Make a custom [writable stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_writable).
+
+`opts` contains the options to pass on to the WritableStream constructor e.g. for creating a readable object stream (or use the
+shortcut `miss.to.obj([...])`).
+
+Returns a writable stream that calls `write(data, enc, cb)` when data is written to the stream.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.concat" id="apidoc.module.mississippi.concat">module mississippi.concat</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.concat" id="apidoc.element.mississippi.concat.concat">
+        function <span class="apidocSignatureSpan">mississippi.</span>concat
+        <span class="apidocSignatureSpan">(opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ConcatStream(opts, cb) {
+  if (!(this instanceof ConcatStream)) return new ConcatStream(opts, cb)
+
+  if (typeof opts === &#x27;function&#x27;) {
+    cb = opts
+    opts = {}
+  }
+  if (!opts) opts = {}
+
+  var encoding = opts.encoding
+  var shouldInferEncoding = false
+
+  if (!encoding) {
+    shouldInferEncoding = true
+  } else {
+    encoding =  String(encoding).toLowerCase()
+    if (encoding === &#x27;u8&#x27; || encoding === &#x27;uint8&#x27;) {
+      encoding = &#x27;uint8array&#x27;
+    }
+  }
+
+  Writable.call(this, { objectMode: true })
+
+  this.encoding = encoding
+  this.shouldInferEncoding = shouldInferEncoding
+
+  if (cb) this.on(&#x27;finish&#x27;, function () { cb(this.getBody()) })
+  this.body = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+writing world
+(nothing happens for 1 sec)
+finished
+```
+
+### concat
+
+#####`var concat = miss.<span class="apidocCodeKeywordSpan">concat</span>(cb)`
+
+Returns a writable stream that concatenates all data written to the stream and calls a callback with the single result.
+
+Calling `miss.concat(cb)` returns a writable stream. `cb` is called when the writable stream is finished, e.g. when all data is
+done being written to it. `cb` is called with a single argument, `(data)`, which will contain the result of concatenating all the
+ data written to the stream.
+
+Note that `miss.concat` will not handle stream errors for you. To handle errors, use `miss.pipe` or handle the `error` event manually
+.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_" id="apidoc.element.mississippi.concat.super_">
+        function <span class="apidocSignatureSpan">mississippi.concat.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Writable(options) {
+  Duplex = Duplex || require(&#x27;./_stream_duplex&#x27;);
+
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!realHasInstance.call(Writable, this) &#x26;&#x26; !(this instanceof Duplex)) {
+    return new Writable(options);
+  }
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === &#x27;function&#x27;) this._write = options.write;
+
+    if (typeof options.writev === &#x27;function&#x27;) this._writev = options.writev;
+  }
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.concat.prototype" id="apidoc.module.mississippi.concat.prototype">module mississippi.concat.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.prototype._write" id="apidoc.element.mississippi.concat.prototype._write">
+        function <span class="apidocSignatureSpan">mississippi.concat.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, enc, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, enc, next) {
+  this.body.push(chunk)
+  next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.prototype.getBody" id="apidoc.element.mississippi.concat.prototype.getBody">
+        function <span class="apidocSignatureSpan">mississippi.concat.prototype.</span>getBody
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBody = function () {
+  if (!this.encoding &#x26;&#x26; this.body.length === 0) return []
+  if (this.shouldInferEncoding) this.encoding = this.inferEncoding()
+  if (this.encoding === &#x27;array&#x27;) return arrayConcat(this.body)
+  if (this.encoding === &#x27;string&#x27;) return stringConcat(this.body)
+  if (this.encoding === &#x27;buffer&#x27;) return bufferConcat(this.body)
+  if (this.encoding === &#x27;uint8array&#x27;) return u8Concat(this.body)
+  return this.body
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.prototype.inferEncoding" id="apidoc.element.mississippi.concat.prototype.inferEncoding">
+        function <span class="apidocSignatureSpan">mississippi.concat.prototype.</span>inferEncoding
+        <span class="apidocSignatureSpan">(buff)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inferEncoding = function (buff) {
+  var firstBuffer = buff === undefined ? this.body[0] : buff;
+  if (Buffer.isBuffer(firstBuffer)) return &#x27;buffer&#x27;
+  if (typeof Uint8Array !== &#x27;undefined&#x27; &#x26;&#x26; firstBuffer instanceof Uint8Array) return &#x27;uint8array&#x27;
+  if (Array.isArray(firstBuffer)) return &#x27;array&#x27;
+  if (typeof firstBuffer === &#x27;string&#x27;) return &#x27;string&#x27;
+  if (Object.prototype.toString.call(firstBuffer) === &#x22;[object Object]&#x22;) return &#x27;object&#x27;
+  return &#x27;buffer&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.concat.super_" id="apidoc.module.mississippi.concat.super_">module mississippi.concat.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.super_" id="apidoc.element.mississippi.concat.super_.super_">
+        function <span class="apidocSignatureSpan">mississippi.concat.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Stream() {
+  EE.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.WritableState" id="apidoc.element.mississippi.concat.super_.WritableState">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.</span>WritableState
+        <span class="apidocSignatureSpan">(options, stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WritableState(options, stream) {
+  Duplex = Duplex || require(&#x27;./_stream_duplex&#x27;);
+
+  options = options || {};
+
+  // object stream flag to indicate whether or not this stream
+  // contains buffers or objects.
+  this.objectMode = !!options.objectMode;
+
+  if (stream instanceof Duplex) this.objectMode = this.objectMode || !!options.writableObjectMode;
+
+  // the point at which write() starts returning false
+  // Note: 0 is a valid value, means that we always return false if
+  // the entire buffer is not flushed immediately on write()
+  var hwm = options.highWaterMark;
+  var defaultHwm = this.objectMode ? 16 : 16 * 1024;
+  this.highWaterMark = hwm || hwm === 0 ? hwm : defaultHwm;
+
+  // cast to ints.
+  this.highWaterMark = ~~this.highWaterMark;
+
+  // drain event flag.
+  this.needDrain = false;
+  // at the start of calling end()
+  this.ending = false;
+  // when end() has been called, and returned
+  this.ended = false;
+  // when &#x27;finish&#x27; is emitted
+  this.finished = false;
+
+  // should we decode strings into buffers before passing to _write?
+  // this is here so that some node-core streams can optimize string
+  // handling at a lower level.
+  var noDecode = options.decodeStrings === false;
+  this.decodeStrings = !noDecode;
+
+  // Crypto is kind of old and crusty.  Historically, its default string
+  // encoding is &#x27;binary&#x27; so we have to make this configurable.
+  // Everything else in the universe uses &#x27;utf8&#x27;, though.
+  this.defaultEncoding = options.defaultEncoding || &#x27;utf8&#x27;;
+
+  // not an actual buffer we keep track of, but a measurement
+  // of how much we&#x27;re waiting to get pushed to some underlying
+  // socket or file.
+  this.length = 0;
+
+  // a flag to see when we&#x27;re in the middle of a write.
+  this.writing = false;
+
+  // when true all writes will be buffered until .uncork() call
+  this.corked = 0;
+
+  // a flag to be able to tell if the onwrite cb is called immediately,
+  // or on a later tick.  We set this to true at first, because any
+  // actions that shouldn&#x27;t happen until &#x22;later&#x22; should generally also
+  // not happen before the first write call.
+  this.sync = true;
+
+  // a flag to know if we&#x27;re processing previously buffered items, which
+  // may call the _write() callback in the same tick, so that we don&#x27;t
+  // end up in an overlapped onwrite situation.
+  this.bufferProcessing = false;
+
+  // the callback that&#x27;s passed to _write(chunk,cb)
+  this.onwrite = function (er) {
+    onwrite(stream, er);
+  };
+
+  // the callback that the user supplies to write(chunk,encoding,cb)
+  this.writecb = null;
+
+  // the amount that is being written when _write is called.
+  this.writelen = 0;
+
+  this.bufferedRequest = null;
+  this.lastBufferedRequest = null;
+
+  // number of pending user-supplied write callbacks
+  // this must be 0 before &#x27;finish&#x27; can be emitted
+  this.pendingcb = 0;
+
+  // emit prefinish if the only thing we&#x27;re waiting for is _write cbs
+  // This is relevant for synchronous Transform streams
+  this.prefinished = false;
+
+  // True if the error was already emitted and should not be thrown again
+  this.errorEmitted = false;
+
+  // count buffered requests
+  this.bufferedRequestCount = 0;
+
+  // allocate the first CorkedRequest, there is always
+  // one allocated and free to use, and we maintain at most two
+  this.corkedRequestsFree = new CorkedRequest(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.concat.super_.WritableState.prototype" id="apidoc.module.mississippi.concat.super_.WritableState.prototype">module mississippi.concat.super_.WritableState.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.WritableState.prototype.getBuffer" id="apidoc.element.mississippi.concat.super_.WritableState.prototype.getBuffer">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.WritableState.prototype.</span>getBuffer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getBuffer() {
+  var current = this.bufferedRequest;
+  var out = [];
+  while (current) {
+    out.push(current);
+    current = current.next;
+  }
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.concat.super_.prototype" id="apidoc.module.mississippi.concat.super_.prototype">module mississippi.concat.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.prototype._write" id="apidoc.element.mississippi.concat.super_.prototype._write">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, cb) {
+  cb(new Error(&#x27;_write() is not implemented&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.prototype.cork" id="apidoc.element.mississippi.concat.super_.prototype.cork">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>cork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cork = function () {
+  var state = this._writableState;
+
+  state.corked++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.prototype.end" id="apidoc.element.mississippi.concat.super_.prototype.end">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>end
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (chunk, encoding, cb) {
+  var state = this._writableState;
+
+  if (typeof chunk === &#x27;function&#x27;) {
+    cb = chunk;
+    chunk = null;
+    encoding = null;
+  } else if (typeof encoding === &#x27;function&#x27;) {
+    cb = encoding;
+    encoding = null;
+  }
+
+  if (chunk !== null &#x26;&#x26; chunk !== undefined) this.write(chunk, encoding);
+
+  // .end() fully uncorks
+  if (state.corked) {
+    state.corked = 1;
+    this.uncork();
+  }
+
+  // ignore unnecessary end() calls.
+  if (!state.ending &#x26;&#x26; !state.finished) endWritable(this, state, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ws.on(&#x27;finish&#x27;, function () {
+  console.log(&#x27;finished&#x27;)
+})
+
+ws.write(&#x27;hello&#x27;)
+ws.write(&#x27;world&#x27;)
+ws.<span class="apidocCodeKeywordSpan">end</span>()
+
+function write (data, enc, cb) {
+  // i am your normal ._write method
+  console.log(&#x27;writing&#x27;, data.toString())
+  cb()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.prototype.pipe" id="apidoc.element.mississippi.concat.super_.prototype.pipe">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>pipe
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipe = function () {
+  this.emit(&#x27;error&#x27;, new Error(&#x27;Cannot pipe, not readable&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [to](#to)
+- [concat](#concat)
+- [finished](#finished)
+- [parallel](#parallel)
+
+### pipe
+
+##### `miss.<span class="apidocCodeKeywordSpan">pipe</span>(stream1, stream2, stream3, ..., cb)`
+
+Pipes streams together and destroys all of them if one of them closes. Calls `cb` with `(error)` if there was an error in any of
+ the streams.
+
+When using standard `source.pipe(destination)` the source will _not_ be destroyed if the destination emits close or error. You are
+ also not able to provide a callback to tell when the pipe has finished.
+
+`miss.pipe` does these two things for you, ensuring you handle stream errors 100% of the time (unhandled errors are probably the
+ most common bug in most node streams code)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.prototype.setDefaultEncoding" id="apidoc.element.mississippi.concat.super_.prototype.setDefaultEncoding">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>setDefaultEncoding
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setDefaultEncoding(encoding) {
+  // node::ParseEncoding() requires lower case.
+  if (typeof encoding === &#x27;string&#x27;) encoding = encoding.toLowerCase();
+  if (!([&#x27;hex&#x27;, &#x27;utf8&#x27;, &#x27;utf-8&#x27;, &#x27;ascii&#x27;, &#x27;binary&#x27;, &#x27;base64&#x27;, &#x27;ucs2&#x27;, &#x27;ucs-2&#x27;, &#x27;utf16le&#x27;, &#x27;utf-16le&#x27;, &#x27;raw&#x27;].indexOf((encoding + &#x27;&#x27;).
+toLowerCase()) &#x3e; -1)) throw new TypeError(&#x27;Unknown encoding: &#x27; + encoding);
+  this._writableState.defaultEncoding = encoding;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.prototype.uncork" id="apidoc.element.mississippi.concat.super_.prototype.uncork">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>uncork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uncork = function () {
+  var state = this._writableState;
+
+  if (state.corked) {
+    state.corked--;
+
+    if (!state.writing &#x26;&#x26; !state.corked &#x26;&#x26; !state.finished &#x26;&#x26; !state.bufferProcessing &#x26;&#x26; state.bufferedRequest) clearBuffer(this
+, state);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.concat.super_.prototype.write" id="apidoc.element.mississippi.concat.super_.prototype.write">
+        function <span class="apidocSignatureSpan">mississippi.concat.super_.prototype.</span>write
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (chunk, encoding, cb) {
+  var state = this._writableState;
+  var ret = false;
+  var isBuf = Buffer.isBuffer(chunk);
+
+  if (typeof encoding === &#x27;function&#x27;) {
+    cb = encoding;
+    encoding = null;
+  }
+
+  if (isBuf) encoding = &#x27;buffer&#x27;;else if (!encoding) encoding = state.defaultEncoding;
+
+  if (typeof cb !== &#x27;function&#x27;) cb = nop;
+
+  if (state.ended) writeAfterEnd(this, cb);else if (isBuf || validChunk(this, state, chunk, cb)) {
+    state.pendingcb++;
+    ret = writeOrBuffer(this, state, isBuf, chunk, encoding, cb);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var ws = miss.to(write, flush)
+
+ws.on(&#x27;finish&#x27;, function () {
+console.log(&#x27;finished&#x27;)
+})
+
+ws.<span class="apidocCodeKeywordSpan">write</span>(&#x27;hello&#x27;)
+ws.write(&#x27;world&#x27;)
+ws.end()
+
+function write (data, enc, cb) {
+// i am your normal ._write method
+console.log(&#x27;writing&#x27;, data.toString())
+cb()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.duplex" id="apidoc.module.mississippi.duplex">module mississippi.duplex</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.duplex" id="apidoc.element.mississippi.duplex.duplex">
+        function <span class="apidocSignatureSpan">mississippi.</span>duplex
+        <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">duplex = function (writable, readable, opts) {
+  if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
+  stream.Duplex.call(this, opts)
+
+  this._writable = null
+  this._readable = null
+  this._readable2 = null
+
+  this._forwardDestroy = !opts || opts.destroy !== false
+  this._forwardEnd = !opts || opts.end !== false
+  this._corked = 1 // start corked
+  this._ondrain = null
+  this._drained = false
+  this._forwarding = false
+  this._unwrite = null
+  this._unread = null
+  this._ended = false
+
+  this.destroyed = false
+
+  if (writable) this.setWritable(writable)
+  if (readable) this.setReadable(readable)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (err) return console.error(&#x27;Image processing error!&#x27;, err)
+  console.log(&#x27;Image processed successfully&#x27;)
+})
+```
+
+### duplex
+
+##### `var duplex = miss.<span class="apidocCodeKeywordSpan">duplex</span>([writable, readable, opts])`
+
+Take two separate streams, a writable and a readable, and turn them into a single [duplex (readable and writable) stream](https://
+nodejs.org/api/stream.html#stream_class_stream_duplex).
+
+The returned stream will emit data from the readable. When you write to it it writes to the writable.
+
+You can either choose to supply the writable and the readable at the time you create the stream, or you can do it later using the
+ `.setWritable` and `.setReadable` methods and data written to the stream in the meantime will be buffered for you.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.obj" id="apidoc.element.mississippi.duplex.obj">
+        function <span class="apidocSignatureSpan">mississippi.duplex.</span>obj
+        <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">obj = function (writable, readable, opts) {
+  if (!opts) opts = {}
+  opts.objectMode = true
+  opts.highWaterMark = 16
+  return new Duplexify(writable, readable, opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### through
+
+#####`var transformer = miss.through([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.<span class="apidocCodeKeywordSpan">obj</span>([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.push(data)`. Call `cb()` to indicate processing of the
+ `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk)`
+
+The `flushFunction`, with signature `(cb)`, is called just before the stream is complete and should be used to wrap up stream processing
+.
+
+#### original module
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_" id="apidoc.element.mississippi.duplex.super_">
+        function <span class="apidocSignatureSpan">mississippi.duplex.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Duplex(options) {
+  if (!(this instanceof Duplex)) return new Duplex(options);
+
+  Readable.call(this, options);
+  Writable.call(this, options);
+
+  if (options &#x26;&#x26; options.readable === false) this.readable = false;
+
+  if (options &#x26;&#x26; options.writable === false) this.writable = false;
+
+  this.allowHalfOpen = true;
+  if (options &#x26;&#x26; options.allowHalfOpen === false) this.allowHalfOpen = false;
+
+  this.once(&#x27;end&#x27;, onend);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.duplex.prototype" id="apidoc.module.mississippi.duplex.prototype">module mississippi.duplex.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype._destroy" id="apidoc.element.mississippi.duplex.prototype._destroy">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_destroy
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_destroy = function (err) {
+  if (err) {
+    var ondrain = this._ondrain
+    this._ondrain = null
+    if (ondrain) ondrain(err)
+    else this.emit(&#x27;error&#x27;, err)
+  }
+
+  if (this._forwardDestroy) {
+    if (this._readable &#x26;&#x26; this._readable.destroy) this._readable.destroy()
+    if (this._writable &#x26;&#x26; this._writable.destroy) this._writable.destroy()
+  }
+
+  this.emit(&#x27;close&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype._finish" id="apidoc.element.mississippi.duplex.prototype._finish">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_finish
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_finish = function (cb) {
+  var self = this
+  this.emit(&#x27;preend&#x27;)
+  onuncork(this, function() {
+    end(self._forwardEnd &#x26;&#x26; self._writable, function() {
+      // haxx to not emit prefinish twice
+      if (self._writableState.prefinished === false) self._writableState.prefinished = true
+      self.emit(&#x27;prefinish&#x27;)
+      onuncork(self, cb)
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype._forward" id="apidoc.element.mississippi.duplex.prototype._forward">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_forward
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_forward = function () {
+  if (this._forwarding || !this._readable2 || !this._drained) return
+  this._forwarding = true
+
+  var data
+
+  while (this._drained &#x26;&#x26; (data = shift(this._readable2)) !== null) {
+    if (this.destroyed) continue
+    this._drained = this.push(data)
+  }
+
+  this._forwarding = false
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype._read" id="apidoc.element.mississippi.duplex.prototype._read">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_read = function () {
+  this._drained = true
+  this._forward()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype._write" id="apidoc.element.mississippi.duplex.prototype._write">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>_write
+        <span class="apidocSignatureSpan">(data, enc, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (data, enc, cb) {
+  if (this.destroyed) return cb()
+  if (this._corked) return onuncork(this, this._write.bind(this, data, enc, cb))
+  if (data === SIGNAL_FLUSH) return this._finish(cb)
+  if (!this._writable) return cb()
+
+  if (this._writable.write(data) === false) this._ondrain = cb
+  else cb()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype.cork" id="apidoc.element.mississippi.duplex.prototype.cork">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>cork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cork = function () {
+  if (++this._corked === 1) this.emit(&#x27;cork&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype.destroy" id="apidoc.element.mississippi.duplex.prototype.destroy">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (err) {
+  if (this.destroyed) return
+  this.destroyed = true
+
+  var self = this
+  process.nextTick(function() {
+    self._destroy(err)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype.end" id="apidoc.element.mississippi.duplex.prototype.end">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>end
+        <span class="apidocSignatureSpan">(data, enc, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (data, enc, cb) {
+  if (typeof data === &#x27;function&#x27;) return this.end(null, null, data)
+  if (typeof enc === &#x27;function&#x27;) return this.end(data, null, enc)
+  this._ended = true
+  if (data) this.write(data)
+  if (!this._writableState.ending) this.write(SIGNAL_FLUSH)
+  return stream.Writable.prototype.end.call(this, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ws.on(&#x27;finish&#x27;, function () {
+  console.log(&#x27;finished&#x27;)
+})
+
+ws.write(&#x27;hello&#x27;)
+ws.write(&#x27;world&#x27;)
+ws.<span class="apidocCodeKeywordSpan">end</span>()
+
+function write (data, enc, cb) {
+  // i am your normal ._write method
+  console.log(&#x27;writing&#x27;, data.toString())
+  cb()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype.setReadable" id="apidoc.element.mississippi.duplex.prototype.setReadable">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>setReadable
+        <span class="apidocSignatureSpan">(readable)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setReadable = function (readable) {
+  if (this._unread) this._unread()
+
+  if (this.destroyed) {
+    if (readable &#x26;&#x26; readable.destroy) readable.destroy()
+    return
+  }
+
+  if (readable === null || readable === false) {
+    this.push(null)
+    this.resume()
+    return
+  }
+
+  var self = this
+  var unend = eos(readable, {writable:false, readable:true}, destroyer(this))
+
+  var onreadable = function() {
+    self._forward()
+  }
+
+  var onend = function() {
+    self.push(null)
+  }
+
+  var clear = function() {
+    self._readable2.removeListener(&#x27;readable&#x27;, onreadable)
+    self._readable2.removeListener(&#x27;end&#x27;, onend)
+    unend()
+  }
+
+  this._drained = true
+  this._readable = readable
+  this._readable2 = readable._readableState ? readable : toStreams2(readable)
+  this._readable2.on(&#x27;readable&#x27;, onreadable)
+  this._readable2.on(&#x27;end&#x27;, onend)
+  this._unread = clear
+
+  this._forward()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype.setWritable" id="apidoc.element.mississippi.duplex.prototype.setWritable">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>setWritable
+        <span class="apidocSignatureSpan">(writable)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setWritable = function (writable) {
+  if (this._unwrite) this._unwrite()
+
+  if (this.destroyed) {
+    if (writable &#x26;&#x26; writable.destroy) writable.destroy()
+    return
+  }
+
+  if (writable === null || writable === false) {
+    this.end()
+    return
+  }
+
+  var self = this
+  var unend = eos(writable, {writable:true, readable:false}, destroyer(this, this._forwardEnd))
+
+  var ondrain = function() {
+    var ondrain = self._ondrain
+    self._ondrain = null
+    if (ondrain) ondrain()
+  }
+
+  var clear = function() {
+    self._writable.removeListener(&#x27;drain&#x27;, ondrain)
+    unend()
+  }
+
+  if (this._unwrite) process.nextTick(ondrain) // force a drain on stream reset to avoid livelocks
+
+  this._writable = writable
+  this._writable.on(&#x27;drain&#x27;, ondrain)
+  this._unwrite = clear
+
+  this.uncork() // always uncork setWritable
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.prototype.uncork" id="apidoc.element.mississippi.duplex.prototype.uncork">
+        function <span class="apidocSignatureSpan">mississippi.duplex.prototype.</span>uncork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uncork = function () {
+  if (this._corked &#x26;&#x26; --this._corked === 0) this.emit(&#x27;uncork&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.duplex.super_" id="apidoc.module.mississippi.duplex.super_">module mississippi.duplex.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_" id="apidoc.element.mississippi.duplex.super_.super_">
+        function <span class="apidocSignatureSpan">mississippi.duplex.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Readable(options) {
+  Duplex = Duplex || require(&#x27;./_stream_duplex&#x27;);
+
+  if (!(this instanceof Readable)) return new Readable(options);
+
+  this._readableState = new ReadableState(options, this);
+
+  // legacy
+  this.readable = true;
+
+  if (options &#x26;&#x26; typeof options.read === &#x27;function&#x27;) this._read = options.read;
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.duplex.super_.prototype" id="apidoc.module.mississippi.duplex.super_.prototype">module mississippi.duplex.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.prototype._write" id="apidoc.element.mississippi.duplex.super_.prototype._write">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, cb) {
+  cb(new Error(&#x27;_write() is not implemented&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.prototype.cork" id="apidoc.element.mississippi.duplex.super_.prototype.cork">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>cork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cork = function () {
+  var state = this._writableState;
+
+  state.corked++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.prototype.end" id="apidoc.element.mississippi.duplex.super_.prototype.end">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>end
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (chunk, encoding, cb) {
+  var state = this._writableState;
+
+  if (typeof chunk === &#x27;function&#x27;) {
+    cb = chunk;
+    chunk = null;
+    encoding = null;
+  } else if (typeof encoding === &#x27;function&#x27;) {
+    cb = encoding;
+    encoding = null;
+  }
+
+  if (chunk !== null &#x26;&#x26; chunk !== undefined) this.write(chunk, encoding);
+
+  // .end() fully uncorks
+  if (state.corked) {
+    state.corked = 1;
+    this.uncork();
+  }
+
+  // ignore unnecessary end() calls.
+  if (!state.ending &#x26;&#x26; !state.finished) endWritable(this, state, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ws.on(&#x27;finish&#x27;, function () {
+  console.log(&#x27;finished&#x27;)
+})
+
+ws.write(&#x27;hello&#x27;)
+ws.write(&#x27;world&#x27;)
+ws.<span class="apidocCodeKeywordSpan">end</span>()
+
+function write (data, enc, cb) {
+  // i am your normal ._write method
+  console.log(&#x27;writing&#x27;, data.toString())
+  cb()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.prototype.setDefaultEncoding" id="apidoc.element.mississippi.duplex.super_.prototype.setDefaultEncoding">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>setDefaultEncoding
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setDefaultEncoding(encoding) {
+  // node::ParseEncoding() requires lower case.
+  if (typeof encoding === &#x27;string&#x27;) encoding = encoding.toLowerCase();
+  if (!([&#x27;hex&#x27;, &#x27;utf8&#x27;, &#x27;utf-8&#x27;, &#x27;ascii&#x27;, &#x27;binary&#x27;, &#x27;base64&#x27;, &#x27;ucs2&#x27;, &#x27;ucs-2&#x27;, &#x27;utf16le&#x27;, &#x27;utf-16le&#x27;, &#x27;raw&#x27;].indexOf((encoding + &#x27;&#x27;).
+toLowerCase()) &#x3e; -1)) throw new TypeError(&#x27;Unknown encoding: &#x27; + encoding);
+  this._writableState.defaultEncoding = encoding;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.prototype.uncork" id="apidoc.element.mississippi.duplex.super_.prototype.uncork">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>uncork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uncork = function () {
+  var state = this._writableState;
+
+  if (state.corked) {
+    state.corked--;
+
+    if (!state.writing &#x26;&#x26; !state.corked &#x26;&#x26; !state.finished &#x26;&#x26; !state.bufferProcessing &#x26;&#x26; state.bufferedRequest) clearBuffer(this
+, state);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.prototype.write" id="apidoc.element.mississippi.duplex.super_.prototype.write">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.prototype.</span>write
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (chunk, encoding, cb) {
+  var state = this._writableState;
+  var ret = false;
+  var isBuf = Buffer.isBuffer(chunk);
+
+  if (typeof encoding === &#x27;function&#x27;) {
+    cb = encoding;
+    encoding = null;
+  }
+
+  if (isBuf) encoding = &#x27;buffer&#x27;;else if (!encoding) encoding = state.defaultEncoding;
+
+  if (typeof cb !== &#x27;function&#x27;) cb = nop;
+
+  if (state.ended) writeAfterEnd(this, cb);else if (isBuf || validChunk(this, state, chunk, cb)) {
+    state.pendingcb++;
+    ret = writeOrBuffer(this, state, isBuf, chunk, encoding, cb);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var ws = miss.to(write, flush)
+
+ws.on(&#x27;finish&#x27;, function () {
+console.log(&#x27;finished&#x27;)
+})
+
+ws.<span class="apidocCodeKeywordSpan">write</span>(&#x27;hello&#x27;)
+ws.write(&#x27;world&#x27;)
+ws.end()
+
+function write (data, enc, cb) {
+// i am your normal ._write method
+console.log(&#x27;writing&#x27;, data.toString())
+cb()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.duplex.super_.super_.prototype" id="apidoc.module.mississippi.duplex.super_.super_.prototype">module mississippi.duplex.super_.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype._read" id="apidoc.element.mississippi.duplex.super_.super_.prototype._read">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>_read
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_read = function (n) {
+  this.emit(&#x27;error&#x27;, new Error(&#x27;_read() is not implemented&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.addListener" id="apidoc.element.mississippi.duplex.super_.super_.prototype.addListener">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>addListener
+        <span class="apidocSignatureSpan">(ev, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addListener = function (ev, fn) {
+  var res = Stream.prototype.on.call(this, ev, fn);
+
+  if (ev === &#x27;data&#x27;) {
+    // Start flowing on next tick if stream isn&#x27;t explicitly paused
+    if (this._readableState.flowing !== false) this.resume();
+  } else if (ev === &#x27;readable&#x27;) {
+    var state = this._readableState;
+    if (!state.endEmitted &#x26;&#x26; !state.readableListening) {
+      state.readableListening = state.needReadable = true;
+      state.emittedReadable = false;
+      if (!state.reading) {
+        processNextTick(nReadingNextTick, this);
+      } else if (state.length) {
+        emitReadable(this, state);
+      }
+    }
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.isPaused" id="apidoc.element.mississippi.duplex.super_.super_.prototype.isPaused">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>isPaused
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPaused = function () {
+  return this._readableState.flowing === false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.on" id="apidoc.element.mississippi.duplex.super_.super_.prototype.on">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>on
+        <span class="apidocSignatureSpan">(ev, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (ev, fn) {
+  var res = Stream.prototype.on.call(this, ev, fn);
+
+  if (ev === &#x27;data&#x27;) {
+    // Start flowing on next tick if stream isn&#x27;t explicitly paused
+    if (this._readableState.flowing !== false) this.resume();
+  } else if (ev === &#x27;readable&#x27;) {
+    var state = this._readableState;
+    if (!state.endEmitted &#x26;&#x26; !state.readableListening) {
+      state.readableListening = state.needReadable = true;
+      state.emittedReadable = false;
+      if (!state.reading) {
+        processNextTick(nReadingNextTick, this);
+      } else if (state.length) {
+        emitReadable(this, state);
+      }
+    }
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`miss.to` is provided by [`require(&#x27;flush-write-stream&#x27;)`](https://www.npmjs.com/package/flush-write-stream)
+
+#### example
+
+```js
+var ws = miss.to(write, flush)
+
+ws.<span class="apidocCodeKeywordSpan">on</span>(&#x27;finish&#x27;, function () {
+  console.log(&#x27;finished&#x27;)
+})
+
+ws.write(&#x27;hello&#x27;)
+ws.write(&#x27;world&#x27;)
+ws.end()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.pause" id="apidoc.element.mississippi.duplex.super_.super_.prototype.pause">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+  debug(&#x27;call pause flowing=%j&#x27;, this._readableState.flowing);
+  if (false !== this._readableState.flowing) {
+    debug(&#x27;pause&#x27;);
+    this._readableState.flowing = false;
+    this.emit(&#x27;pause&#x27;);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.pipe" id="apidoc.element.mississippi.duplex.super_.super_.prototype.pipe">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>pipe
+        <span class="apidocSignatureSpan">(dest, pipeOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipe = function (dest, pipeOpts) {
+  var src = this;
+  var state = this._readableState;
+
+  switch (state.pipesCount) {
+    case 0:
+      state.pipes = dest;
+      break;
+    case 1:
+      state.pipes = [state.pipes, dest];
+      break;
+    default:
+      state.pipes.push(dest);
+      break;
+  }
+  state.pipesCount += 1;
+  debug(&#x27;pipe count=%d opts=%j&#x27;, state.pipesCount, pipeOpts);
+
+  var doEnd = (!pipeOpts || pipeOpts.end !== false) &#x26;&#x26; dest !== process.stdout &#x26;&#x26; dest !== process.stderr;
+
+  var endFn = doEnd ? onend : cleanup;
+  if (state.endEmitted) processNextTick(endFn);else src.once(&#x27;end&#x27;, endFn);
+
+  dest.on(&#x27;unpipe&#x27;, onunpipe);
+  function onunpipe(readable) {
+    debug(&#x27;onunpipe&#x27;);
+    if (readable === src) {
+      cleanup();
+    }
+  }
+
+  function onend() {
+    debug(&#x27;onend&#x27;);
+    dest.end();
+  }
+
+  // when the dest drains, it reduces the awaitDrain counter
+  // on the source.  This would be more elegant with a .once()
+  // handler in flow(), but adding and removing repeatedly is
+  // too slow.
+  var ondrain = pipeOnDrain(src);
+  dest.on(&#x27;drain&#x27;, ondrain);
+
+  var cleanedUp = false;
+  function cleanup() {
+    debug(&#x27;cleanup&#x27;);
+    // cleanup event handlers once the pipe is broken
+    dest.removeListener(&#x27;close&#x27;, onclose);
+    dest.removeListener(&#x27;finish&#x27;, onfinish);
+    dest.removeListener(&#x27;drain&#x27;, ondrain);
+    dest.removeListener(&#x27;error&#x27;, onerror);
+    dest.removeListener(&#x27;unpipe&#x27;, onunpipe);
+    src.removeListener(&#x27;end&#x27;, onend);
+    src.removeListener(&#x27;end&#x27;, cleanup);
+    src.removeListener(&#x27;data&#x27;, ondata);
+
+    cleanedUp = true;
+
+    // if the reader is waiting for a drain event from this
+    // specific writer, then it would cause it to never start
+    // flowing again.
+    // So, if this is awaiting a drain, then we just call it now.
+    // If we don&#x27;t know, then assume that we are waiting for one.
+    if (state.awaitDrain &#x26;&#x26; (!dest._writableState || dest._writableState.needDrain)) ondrain();
+  }
+
+  // If the user pushes more data while we&#x27;re writing to dest then we&#x27;ll end up
+  // in ondata again. However, we only want to increase awaitDrain once because
+  // dest will only emit one &#x27;drain&#x27; event for the multiple writes.
+  // =&#x3e; Introduce a guard on increasing awaitDrain.
+  var increasedAwaitDrain = false;
+  src.on(&#x27;data&#x27;, ondata);
+  function ondata(chunk) {
+    debug(&#x27;ondata&#x27;);
+    increasedAwaitDrain = false;
+    var ret = dest.write(chunk);
+    if (false === ret &#x26;&#x26; !increasedAwaitDrain) {
+      // If the user unpiped during `dest.write()`, it is possible
+      // to get stuck in a permanently paused state if that write
+      // also returned false.
+      // =&#x3e; Check whether `dest` is still a piping destination.
+      if ((state.pipesCount === 1 &#x26;&#x26; state.pipes === dest || state.pipesCount &#x3e; 1 &#x26;&#x26; indexOf(state.pipes, dest) !== -1) &#x26;&#x26; !cleanedUp
+) {
+        debug(&#x27;false write response, pause&#x27;, src._readableState.awaitDrain);
+        src._readableState.awaitDrain++;
+        increasedAwaitDrain = true;
+      }
+      src.pause();
+    }
+  }
+
+  // if the dest has an error, then stop piping into it.
+  // however, don&#x27;t suppress the throwing behavior for this.
+  function onerror(er) {
+    debug(&#x27;onerror&#x27;, er);
+    unpipe();
+    dest.removeListener(&#x27;error&#x27;, onerror);
+    if (EElistenerCount(dest, &#x27;error&#x27;) === 0) dest.emit(&#x27;error&#x27;, er);
+  }
+
+  // Make sure our error handler is attached before userland ones.
+  prependListener(dest, &#x27;error&#x27;, onerror);
+
+  // Both close and finish should trigger unpipe, but only once.
+  function onclose() {
+    dest.removeListener(&#x27;finish&#x27;, onfinish);
+    unpipe();
+  }
+  dest.once(&#x27;close&#x27;, onclose);
+  function onfinish() {
+    debug(&#x27;onfinish&#x27;);
+    dest.removeListener(&#x27;close&#x27;, onclose);
+    unpipe();
+  }
+  dest.once(&#x27;finish&#x27;, onfinish);
+
+  function unpipe() {
+    debug(&#x27;unpipe&#x27;);
+    src.unpipe(dest);
+  }
+
+  // tell the dest that it&#x27;s being piped to
+  dest.emit(&#x27;pipe&#x27;, src);
+
+  // start the flow if it hasn&#x27;t been started already.
+  if (!state.flowing) {
+    debug(&#x27;pipe resume&#x27;);
+    src.resume();
+  }
+
+  return dest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [to](#to)
+- [concat](#concat)
+- [finished](#finished)
+- [parallel](#parallel)
+
+### pipe
+
+##### `miss.<span class="apidocCodeKeywordSpan">pipe</span>(stream1, stream2, stream3, ..., cb)`
+
+Pipes streams together and destroys all of them if one of them closes. Calls `cb` with `(error)` if there was an error in any of
+ the streams.
+
+When using standard `source.pipe(destination)` the source will _not_ be destroyed if the destination emits close or error. You are
+ also not able to provide a callback to tell when the pipe has finished.
+
+`miss.pipe` does these two things for you, ensuring you handle stream errors 100% of the time (unhandled errors are probably the
+ most common bug in most node streams code)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.push" id="apidoc.element.mississippi.duplex.super_.super_.prototype.push">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>push
+        <span class="apidocSignatureSpan">(chunk, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">push = function (chunk, encoding) {
+  var state = this._readableState;
+
+  if (!state.objectMode &#x26;&#x26; typeof chunk === &#x27;string&#x27;) {
+    encoding = encoding || state.defaultEncoding;
+    if (encoding !== state.encoding) {
+      chunk = bufferShim.from(chunk, encoding);
+      encoding = &#x27;&#x27;;
+    }
+  }
+
+  return readableAddChunk(this, state, chunk, encoding, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#####`var transformer = miss.through([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.obj([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.<span class="apidocCodeKeywordSpan">push</span>(data
+)`. Call `cb()` to indicate processing of the `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk
+)`
+
+The `flushFunction`, with signature `(cb)`, is called just before the stream is complete and should be used to wrap up stream processing
+.
+
+#### original module
+
+`miss.through` is provided by [`require(&#x27;through2&#x27;)`](https://www.npmjs.com/package/through2)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.read" id="apidoc.element.mississippi.duplex.super_.super_.prototype.read">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>read
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (n) {
+  debug(&#x27;read&#x27;, n);
+  n = parseInt(n, 10);
+  var state = this._readableState;
+  var nOrig = n;
+
+  if (n !== 0) state.emittedReadable = false;
+
+  // if we&#x27;re doing read(0) to trigger a readable event, but we
+  // already have a bunch of data in the buffer, then just trigger
+  // the &#x27;readable&#x27; event and move on.
+  if (n === 0 &#x26;&#x26; state.needReadable &#x26;&#x26; (state.length &#x3e;= state.highWaterMark || state.ended)) {
+    debug(&#x27;read: emitReadable&#x27;, state.length, state.ended);
+    if (state.length === 0 &#x26;&#x26; state.ended) endReadable(this);else emitReadable(this);
+    return null;
+  }
+
+  n = howMuchToRead(n, state);
+
+  // if we&#x27;ve ended, and we&#x27;re now clear, then finish it up.
+  if (n === 0 &#x26;&#x26; state.ended) {
+    if (state.length === 0) endReadable(this);
+    return null;
+  }
+
+  // All the actual chunk generation logic needs to be
+  // *below* the call to _read.  The reason is that in certain
+  // synthetic stream cases, such as passthrough streams, _read
+  // may be a completely synchronous operation which may change
+  // the state of the read buffer, providing enough data when
+  // before there was *not* enough.
+  //
+  // So, the steps are:
+  // 1. Figure out what the state of things will be after we do
+  // a read from the buffer.
+  //
+  // 2. If that resulting state will trigger a _read, then call _read.
+  // Note that this may be asynchronous, or synchronous.  Yes, it is
+  // deeply ugly to write APIs this way, but that still doesn&#x27;t mean
+  // that the Readable class should behave improperly, as streams are
+  // designed to be sync/async agnostic.
+  // Take note if the _read call is sync or async (ie, if the read call
+  // has returned yet), so that we know whether or not it&#x27;s safe to emit
+  // &#x27;readable&#x27; etc.
+  //
+  // 3. Actually pull the requested chunks out of the buffer and return.
+
+  // if we need a readable event, then we need to do some reading.
+  var doRead = state.needReadable;
+  debug(&#x27;need readable&#x27;, doRead);
+
+  // if we currently have less than the highWaterMark, then also read some
+  if (state.length === 0 || state.length - n &#x3c; state.highWaterMark) {
+    doRead = true;
+    debug(&#x27;length less than watermark&#x27;, doRead);
+  }
+
+  // however, if we&#x27;ve ended, then there&#x27;s no point, and if we&#x27;re already
+  // reading, then it&#x27;s unnecessary.
+  if (state.ended || state.reading) {
+    doRead = false;
+    debug(&#x27;reading or ended&#x27;, doRead);
+  } else if (doRead) {
+    debug(&#x27;do read&#x27;);
+    state.reading = true;
+    state.sync = true;
+    // if the length is currently zero, then we *need* a readable event.
+    if (state.length === 0) state.needReadable = true;
+    // call internal read method
+    this._read(state.highWaterMark);
+    state.sync = false;
+    // If _read pushed data synchronously, then `reading` will be false,
+    // and we need to re-evaluate how much data we can return to the user.
+    if (!state.reading) n = howMuchToRead(nOrig, state);
+  }
+
+  var ret;
+  if (n &#x3e; 0) ret = fromList(n, state);else ret = null;
+
+  if (ret === null) {
+    state.needReadable = true;
+    n = 0;
+  } else {
+    state.length -= n;
+  }
+
+  if (state.length === 0) {
+    // If we have nothing in the buffer, then we want to know
+    // as soon as we *do* get something into the buffer.
+    if (!state.ended) state.needReadable = true;
+
+    // If we tried to read() past the EOF, then emit end on the next tick.
+    if (nOrig !== n &#x26;&#x26; state.ended) endReadable(this);
+  }
+
+  if (ret !== null) this.emit(&#x27;data&#x27;, ret);
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.resume" id="apidoc.element.mississippi.duplex.super_.super_.prototype.resume">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>resume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resume = function () {
+  var state = this._readableState;
+  if (!state.flowing) {
+    debug(&#x27;resume&#x27;);
+    state.flowing = true;
+    resume(this, state);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.setEncoding" id="apidoc.element.mississippi.duplex.super_.super_.prototype.setEncoding">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>setEncoding
+        <span class="apidocSignatureSpan">(enc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setEncoding = function (enc) {
+  if (!StringDecoder) StringDecoder = require(&#x27;string_decoder/&#x27;).StringDecoder;
+  this._readableState.decoder = new StringDecoder(enc);
+  this._readableState.encoding = enc;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.unpipe" id="apidoc.element.mississippi.duplex.super_.super_.prototype.unpipe">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>unpipe
+        <span class="apidocSignatureSpan">(dest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unpipe = function (dest) {
+  var state = this._readableState;
+
+  // if we&#x27;re not piping anywhere, then do nothing.
+  if (state.pipesCount === 0) return this;
+
+  // just one destination.  most common case.
+  if (state.pipesCount === 1) {
+    // passed in one, but it&#x27;s not the right one.
+    if (dest &#x26;&#x26; dest !== state.pipes) return this;
+
+    if (!dest) dest = state.pipes;
+
+    // got a match.
+    state.pipes = null;
+    state.pipesCount = 0;
+    state.flowing = false;
+    if (dest) dest.emit(&#x27;unpipe&#x27;, this);
+    return this;
+  }
+
+  // slow case. multiple pipe destinations.
+
+  if (!dest) {
+    // remove all.
+    var dests = state.pipes;
+    var len = state.pipesCount;
+    state.pipes = null;
+    state.pipesCount = 0;
+    state.flowing = false;
+
+    for (var i = 0; i &#x3c; len; i++) {
+      dests[i].emit(&#x27;unpipe&#x27;, this);
+    }return this;
+  }
+
+  // try to find the right one.
+  var index = indexOf(state.pipes, dest);
+  if (index === -1) return this;
+
+  state.pipes.splice(index, 1);
+  state.pipesCount -= 1;
+  if (state.pipesCount === 1) state.pipes = state.pipes[0];
+
+  dest.emit(&#x27;unpipe&#x27;, this);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.unshift" id="apidoc.element.mississippi.duplex.super_.super_.prototype.unshift">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>unshift
+        <span class="apidocSignatureSpan">(chunk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unshift = function (chunk) {
+  var state = this._readableState;
+  return readableAddChunk(this, state, chunk, &#x27;&#x27;, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.duplex.super_.super_.prototype.wrap" id="apidoc.element.mississippi.duplex.super_.super_.prototype.wrap">
+        function <span class="apidocSignatureSpan">mississippi.duplex.super_.super_.prototype.</span>wrap
+        <span class="apidocSignatureSpan">(stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrap = function (stream) {
+  var state = this._readableState;
+  var paused = false;
+
+  var self = this;
+  stream.on(&#x27;end&#x27;, function () {
+    debug(&#x27;wrapped end&#x27;);
+    if (state.decoder &#x26;&#x26; !state.ended) {
+      var chunk = state.decoder.end();
+      if (chunk &#x26;&#x26; chunk.length) self.push(chunk);
+    }
+
+    self.push(null);
+  });
+
+  stream.on(&#x27;data&#x27;, function (chunk) {
+    debug(&#x27;wrapped data&#x27;);
+    if (state.decoder) chunk = state.decoder.write(chunk);
+
+    // don&#x27;t skip over falsy values in objectMode
+    if (state.objectMode &#x26;&#x26; (chunk === null || chunk === undefined)) return;else if (!state.objectMode &#x26;&#x26; (!chunk || !chunk.length
+)) return;
+
+    var ret = self.push(chunk);
+    if (!ret) {
+      paused = true;
+      stream.pause();
+    }
+  });
+
+  // proxy all the other methods.
+  // important when wrapping filters and duplexes.
+  for (var i in stream) {
+    if (this[i] === undefined &#x26;&#x26; typeof stream[i] === &#x27;function&#x27;) {
+      this[i] = function (method) {
+        return function () {
+          return stream[method].apply(stream, arguments);
+        };
+      }(i);
+    }
+  }
+
+  // proxy certain important events.
+  var events = [&#x27;error&#x27;, &#x27;close&#x27;, &#x27;destroy&#x27;, &#x27;pause&#x27;, &#x27;resume&#x27;];
+  forEach(events, function (ev) {
+    stream.on(ev, self.emit.bind(self, ev));
+  });
+
+  // when we try to consume some more bytes, simply unpause the
+  // underlying stream.
+  self._read = function (n) {
+    debug(&#x27;wrapped _read&#x27;, n);
+    if (paused) {
+      paused = false;
+      stream.resume();
+    }
+  };
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.from" id="apidoc.module.mississippi.from">module mississippi.from</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.from.from" id="apidoc.element.mississippi.from.from">
+        function <span class="apidocSignatureSpan">mississippi.</span>from
+        <span class="apidocSignatureSpan">(opts, read)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function from2(opts, read) {
+  if (typeof opts !== &#x27;object&#x27; || Array.isArray(opts)) {
+    read = opts
+    opts = {}
+  }
+
+  var rs = new Proto(opts)
+  rs._from = Array.isArray(read) ? toFunction(read) : (read || noop)
+  return rs
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (err) return console.error(&#x27;Trouble uppercasing!&#x27;)
+  console.log(&#x27;Splendid uppercasing!&#x27;)
+})
+```
+
+### from
+
+#####`miss.<span class="apidocCodeKeywordSpan">from</span>([opts], read)`
+
+Make a custom [readable stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_readable).
+
+`opts` contains the options to pass on to the ReadableStream constructor e.g. for creating a readable object stream (or use the
+shortcut `miss.from.obj([...])`).
+
+Returns a readable stream that calls `read(size, next)` when data is requested from the stream.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.from.ctor" id="apidoc.element.mississippi.from.ctor">
+        function <span class="apidocSignatureSpan">mississippi.from.</span>ctor
+        <span class="apidocSignatureSpan">(opts, read)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ctor(opts, read) {
+  if (typeof opts === &#x27;function&#x27;) {
+    read = opts
+    opts = {}
+  }
+
+  opts = defaults(opts)
+
+  inherits(Class, Readable)
+  function Class(override) {
+    if (!(this instanceof Class)) return new Class(override)
+    this._reading = false
+    this._callback = check
+    this.destroyed = false
+    Readable.call(this, override || opts)
+
+    var self = this
+    var hwm = this._readableState.highWaterMark
+
+    function check(err, data) {
+      if (self.destroyed) return
+      if (err) return self.destroy(err)
+      if (data === null) return self.push(null)
+      self._reading = false
+      if (self.push(data)) self._read(hwm)
+    }
+  }
+
+  Class.prototype._from = read || noop
+  Class.prototype._read = function(size) {
+    if (this._reading || this.destroyed) return
+    this._reading = true
+    this._from(size, this._callback)
+  }
+
+  Class.prototype.destroy = function(err) {
+    if (this.destroyed) return
+    this.destroyed = true
+
+    var self = this
+    process.nextTick(function() {
+      if (err) self.emit(&#x27;error&#x27;, err)
+      self.emit(&#x27;close&#x27;)
+    })
+  }
+
+  return Class
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.from.obj" id="apidoc.element.mississippi.from.obj">
+        function <span class="apidocSignatureSpan">mississippi.from.</span>obj
+        <span class="apidocSignatureSpan">(opts, read)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function obj(opts, read) {
+  if (typeof opts === &#x27;function&#x27; || Array.isArray(opts)) {
+    read = opts
+    opts = {}
+  }
+
+  opts = defaults(opts)
+  opts.objectMode = true
+  opts.highWaterMark = 16
+
+  return from2(opts, read)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### through
+
+#####`var transformer = miss.through([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.<span class="apidocCodeKeywordSpan">obj</span>([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.push(data)`. Call `cb()` to indicate processing of the
+ `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk)`
+
+The `flushFunction`, with signature `(cb)`, is called just before the stream is complete and should be used to wrap up stream processing
+.
+
+#### original module
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.pipeline" id="apidoc.module.mississippi.pipeline">module mississippi.pipeline</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline.pipeline" id="apidoc.element.mississippi.pipeline.pipeline">
+        function <span class="apidocSignatureSpan">mississippi.</span>pipeline
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipeline = function () {
+  var streams = toArray(arguments)
+  if (!(this instanceof Pumpify)) return new Pumpify(streams)
+  Duplexify.call(this, null, null, opts)
+  if (streams.length) this.setPipeline(streams)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var fs = require(&#x27;fs&#x27;)
+var split = require(&#x27;split2&#x27;)
+
+var newLineSeparatedNumbers = fs.createReadStream(&#x27;numbers.txt&#x27;)
+
+var pipeline = miss.<span class="apidocCodeKeywordSpan">pipeline</span>(newLineSeparatedNumbers, split())
+var each = miss.each(pipeline, eachLine, done)
+var sum = 0
+
+function eachLine (line, next) {
+  sum += parseInt(line.toString())
+  next()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline.obj" id="apidoc.element.mississippi.pipeline.obj">
+        function <span class="apidocSignatureSpan">mississippi.pipeline.</span>obj
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">obj = function () {
+  var streams = toArray(arguments)
+  if (!(this instanceof Pumpify)) return new Pumpify(streams)
+  Duplexify.call(this, null, null, opts)
+  if (streams.length) this.setPipeline(streams)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### through
+
+#####`var transformer = miss.through([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.<span class="apidocCodeKeywordSpan">obj</span>([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.push(data)`. Call `cb()` to indicate processing of the
+ `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk)`
+
+The `flushFunction`, with signature `(cb)`, is called just before the stream is complete and should be used to wrap up stream processing
+.
+
+#### original module
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline.super_" id="apidoc.element.mississippi.pipeline.super_">
+        function <span class="apidocSignatureSpan">mississippi.pipeline.</span>super_
+        <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (writable, readable, opts) {
+  if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
+  stream.Duplex.call(this, opts)
+
+  this._writable = null
+  this._readable = null
+  this._readable2 = null
+
+  this._forwardDestroy = !opts || opts.destroy !== false
+  this._forwardEnd = !opts || opts.end !== false
+  this._corked = 1 // start corked
+  this._ondrain = null
+  this._drained = false
+  this._forwarding = false
+  this._unwrite = null
+  this._unread = null
+  this._ended = false
+
+  this.destroyed = false
+
+  if (writable) this.setWritable(writable)
+  if (readable) this.setReadable(readable)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.pipeline.obj" id="apidoc.module.mississippi.pipeline.obj">module mississippi.pipeline.obj</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline.obj.obj" id="apidoc.element.mississippi.pipeline.obj.obj">
+        function <span class="apidocSignatureSpan">mississippi.pipeline.</span>obj
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">obj = function () {
+  var streams = toArray(arguments)
+  if (!(this instanceof Pumpify)) return new Pumpify(streams)
+  Duplexify.call(this, null, null, opts)
+  if (streams.length) this.setPipeline(streams)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### through
+
+#####`var transformer = miss.through([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.<span class="apidocCodeKeywordSpan">obj</span>([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.push(data)`. Call `cb()` to indicate processing of the
+ `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk)`
+
+The `flushFunction`, with signature `(cb)`, is called just before the stream is complete and should be used to wrap up stream processing
+.
+
+#### original module
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline.obj.super_" id="apidoc.element.mississippi.pipeline.obj.super_">
+        function <span class="apidocSignatureSpan">mississippi.pipeline.obj.</span>super_
+        <span class="apidocSignatureSpan">(writable, readable, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (writable, readable, opts) {
+  if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
+  stream.Duplex.call(this, opts)
+
+  this._writable = null
+  this._readable = null
+  this._readable2 = null
+
+  this._forwardDestroy = !opts || opts.destroy !== false
+  this._forwardEnd = !opts || opts.end !== false
+  this._corked = 1 // start corked
+  this._ondrain = null
+  this._drained = false
+  this._forwarding = false
+  this._unwrite = null
+  this._unread = null
+  this._ended = false
+
+  this.destroyed = false
+
+  if (writable) this.setWritable(writable)
+  if (readable) this.setReadable(readable)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.pipeline.obj.prototype" id="apidoc.module.mississippi.pipeline.obj.prototype">module mississippi.pipeline.obj.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline.obj.prototype.setPipeline" id="apidoc.element.mississippi.pipeline.obj.prototype.setPipeline">
+        function <span class="apidocSignatureSpan">mississippi.pipeline.obj.prototype.</span>setPipeline
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPipeline = function () {
+  var streams = toArray(arguments)
+  var self = this
+  var ended = false
+  var w = streams[0]
+  var r = streams[streams.length-1]
+
+  r = r.readable ? r : null
+  w = w.writable ? w : null
+
+  var onclose = function() {
+    streams[0].emit(&#x27;error&#x27;, new Error(&#x27;stream was destroyed&#x27;))
+  }
+
+  this.on(&#x27;close&#x27;, onclose)
+  this.on(&#x27;prefinish&#x27;, function() {
+    if (!ended) self.cork()
+  })
+
+  pump(streams, function(err) {
+    self.removeListener(&#x27;close&#x27;, onclose)
+    if (err) return self.destroy(err)
+    ended = true
+    self.uncork()
+  })
+
+  if (this.destroyed) return onclose()
+  this.setWritable(w)
+  this.setReadable(r)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.pipeline.prototype" id="apidoc.module.mississippi.pipeline.prototype">module mississippi.pipeline.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.pipeline.prototype.setPipeline" id="apidoc.element.mississippi.pipeline.prototype.setPipeline">
+        function <span class="apidocSignatureSpan">mississippi.pipeline.prototype.</span>setPipeline
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPipeline = function () {
+  var streams = toArray(arguments)
+  var self = this
+  var ended = false
+  var w = streams[0]
+  var r = streams[streams.length-1]
+
+  r = r.readable ? r : null
+  w = w.writable ? w : null
+
+  var onclose = function() {
+    streams[0].emit(&#x27;error&#x27;, new Error(&#x27;stream was destroyed&#x27;))
+  }
+
+  this.on(&#x27;close&#x27;, onclose)
+  this.on(&#x27;prefinish&#x27;, function() {
+    if (!ended) self.cork()
+  })
+
+  pump(streams, function(err) {
+    self.removeListener(&#x27;close&#x27;, onclose)
+    if (err) return self.destroy(err)
+    ended = true
+    self.uncork()
+  })
+
+  if (this.destroyed) return onclose()
+  this.setWritable(w)
+  this.setReadable(r)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.through" id="apidoc.module.mississippi.through">module mississippi.through</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.through.through" id="apidoc.element.mississippi.through.through">
+        function <span class="apidocSignatureSpan">mississippi.</span>through
+        <span class="apidocSignatureSpan">(options, transform, flush)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">through = function (options, transform, flush) {
+  if (typeof options == &#x27;function&#x27;) {
+    flush     = transform
+    transform = options
+    options   = {}
+  }
+
+  if (typeof transform != &#x27;function&#x27;)
+    transform = noop
+
+  if (typeof flush != &#x27;function&#x27;)
+    flush = null
+
+  return construct(options, transform, flush)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// duplexCurl will write to stdin and read from stdout
+var duplexCurl = miss.duplex(curl.stdin, curl.stdout)
+```
+
+### through
+
+#####`var transformer = miss.<span class="apidocCodeKeywordSpan">through</span>([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.obj([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.push(data)`. Call `cb()` to indicate processing of the
+ `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.through.ctor" id="apidoc.element.mississippi.through.ctor">
+        function <span class="apidocSignatureSpan">mississippi.through.</span>ctor
+        <span class="apidocSignatureSpan">(options, transform, flush)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ctor = function (options, transform, flush) {
+  if (typeof options == &#x27;function&#x27;) {
+    flush     = transform
+    transform = options
+    options   = {}
+  }
+
+  if (typeof transform != &#x27;function&#x27;)
+    transform = noop
+
+  if (typeof flush != &#x27;function&#x27;)
+    flush = null
+
+  return construct(options, transform, flush)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.through.obj" id="apidoc.element.mississippi.through.obj">
+        function <span class="apidocSignatureSpan">mississippi.through.</span>obj
+        <span class="apidocSignatureSpan">(options, transform, flush)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">obj = function (options, transform, flush) {
+  if (typeof options == &#x27;function&#x27;) {
+    flush     = transform
+    transform = options
+    options   = {}
+  }
+
+  if (typeof transform != &#x27;function&#x27;)
+    transform = noop
+
+  if (typeof flush != &#x27;function&#x27;)
+    flush = null
+
+  return construct(options, transform, flush)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### through
+
+#####`var transformer = miss.through([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.<span class="apidocCodeKeywordSpan">obj</span>([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.push(data)`. Call `cb()` to indicate processing of the
+ `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk)`
+
+The `flushFunction`, with signature `(cb)`, is called just before the stream is complete and should be used to wrap up stream processing
+.
+
+#### original module
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.to" id="apidoc.module.mississippi.to">module mississippi.to</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.to.to" id="apidoc.element.mississippi.to.to">
+        function <span class="apidocSignatureSpan">mississippi.</span>to
+        <span class="apidocSignatureSpan">(opts, write, flush)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WriteStream(opts, write, flush) {
+  if (!(this instanceof WriteStream)) return new WriteStream(opts, write, flush)
+
+  if (typeof opts === &#x27;function&#x27;) {
+    flush = write
+    write = opts
+    opts = {}
+  }
+
+  stream.Writable.call(this, opts)
+
+  this.destroyed = false
+  this._worker = write || null
+  this._flush = flush || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// pipe &#x22;hello world&#x22; out
+// to stdout.
+fromString(&#x27;hello world&#x27;).pipe(process.stdout)
+```
+
+### to
+
+#####`miss.<span class="apidocCodeKeywordSpan">to</span>([options], write, [flush])`
+
+Make a custom [writable stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_writable).
+
+`opts` contains the options to pass on to the WritableStream constructor e.g. for creating a readable object stream (or use the
+shortcut `miss.to.obj([...])`).
+
+Returns a writable stream that calls `write(data, enc, cb)` when data is written to the stream.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.to.obj" id="apidoc.element.mississippi.to.obj">
+        function <span class="apidocSignatureSpan">mississippi.to.</span>obj
+        <span class="apidocSignatureSpan">(opts, worker, flush)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">obj = function (opts, worker, flush) {
+  if (typeof opts === &#x27;function&#x27;) return WriteStream.obj(null, opts, worker)
+  if (!opts) opts = {}
+  opts.objectMode = true
+  return new WriteStream(opts, worker, flush)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### through
+
+#####`var transformer = miss.through([options, transformFunction, flushFunction])`
+
+Make a custom [transform stream](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform).
+
+The `options` object is passed to the internal transform stream and can be used to create an `objectMode` stream (or use the shortcut
+ `miss.through.<span class="apidocCodeKeywordSpan">obj</span>([...])`)
+
+The `transformFunction` is called when data is available for the writable side and has the signature `(chunk, encoding, cb)`. Within
+ the function, add data to the readable side any number of times with `this.push(data)`. Call `cb()` to indicate processing of the
+ `chunk` is complete. Or to easily emit a single error or chunk, call `cb(err, chunk)`
+
+The `flushFunction`, with signature `(cb)`, is called just before the stream is complete and should be used to wrap up stream processing
+.
+
+#### original module
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.to.super_" id="apidoc.element.mississippi.to.super_">
+        function <span class="apidocSignatureSpan">mississippi.to.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Writable(options) {
+  Duplex = Duplex || require(&#x27;./_stream_duplex&#x27;);
+
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!realHasInstance.call(Writable, this) &#x26;&#x26; !(this instanceof Duplex)) {
+    return new Writable(options);
+  }
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === &#x27;function&#x27;) this._write = options.write;
+
+    if (typeof options.writev === &#x27;function&#x27;) this._writev = options.writev;
+  }
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mississippi.to.prototype" id="apidoc.module.mississippi.to.prototype">module mississippi.to.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.to.prototype._write" id="apidoc.element.mississippi.to.prototype._write">
+        function <span class="apidocSignatureSpan">mississippi.to.prototype.</span>_write
+        <span class="apidocSignatureSpan">(data, enc, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (data, enc, cb) {
+  if (SIGNAL_FLUSH === data) this._flush(cb)
+  else this._worker(data, enc, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.to.prototype.destroy" id="apidoc.element.mississippi.to.prototype.destroy">
+        function <span class="apidocSignatureSpan">mississippi.to.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (err) {
+  if (this.destroyed) return
+  this.destroyed = true
+  if (err) this.emit(&#x27;error&#x27;, err)
+  this.emit(&#x27;close&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mississippi.to.prototype.end" id="apidoc.element.mississippi.to.prototype.end">
+        function <span class="apidocSignatureSpan">mississippi.to.prototype.</span>end
+        <span class="apidocSignatureSpan">(data, enc, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (data, enc, cb) {
+  if (!this._flush) return stream.Writable.prototype.end.apply(this, arguments)
+  if (typeof data === &#x27;function&#x27;) return this.end(null, null, data)
+  if (typeof enc === &#x27;function&#x27;) return this.end(data, null, enc)
+  if (data) this.write(data)
+  if (!this._writableState.ending) this.write(SIGNAL_FLUSH)
+  return stream.Writable.prototype.end.call(this, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ws.on(&#x27;finish&#x27;, function () {
+  console.log(&#x27;finished&#x27;)
+})
+
+ws.write(&#x27;hello&#x27;)
+ws.write(&#x27;world&#x27;)
+ws.<span class="apidocCodeKeywordSpan">end</span>()
+
+function write (data, enc, cb) {
+  // i am your normal ._write method
+  console.log(&#x27;writing&#x27;, data.toString())
+  cb()
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
