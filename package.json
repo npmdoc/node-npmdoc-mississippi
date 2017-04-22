@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "mississippi",
-    "description": "api documentation for [mississippi (v1.3.0)](https://github.com/maxogden/mississippi#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-mississippi.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mississippi) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mississippi.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mississippi)",
+    "description": "#### api documentation for  [mississippi (v1.3.0)](https://github.com/maxogden/mississippi#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-mississippi.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mississippi) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mississippi.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mississippi)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "mississippi": "*",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.1"
+    "version": "2017.4.23"
 }
